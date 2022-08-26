@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* My componens */
+
+.primary_btn{
+    @apply w-max text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-base px-5 py-2.5 mr-2 mb-2  flex justify-center items-center
+}
+
+/* table */
+.border-r{
+    @apply border-r-2 border-gray-500
+}

@@ -8,24 +8,6 @@
 </head>
 <body class="bg-gray-200 font-bold">
 
-<header class="text-gray-600 bg-yellow-500 body-font">
-
-  <div class="container mx-auto flex justify-around p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center flex-wrap text-gray-900 mb-4 md:mb-0">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-      </svg>
-      <span class="ml-3 text-xl font-bold">Real Brothers Security</span>
-    </a>
-
-    <div class="">
-        <a type="button" class="flex justify-center items-center w-24 mx-auto text-white bg-black border-0 py-2 px-8 focus:outline-none rounded text-lg" href="<?= PATH ?>index.php">Salir <i class='bx bx-right-arrow-alt'></i></a>
-    </div>
-
-  </div>
-</header>
-
-
 
 <section class="text-gray-400 body-font relative">
         <div class="container px-5 sm:py-14 py-8 mx-auto ">
@@ -62,5 +44,9 @@
             </div>
         </div>
     </section>
+
+        <div class="p-2 pb-12 w-full">
+            <a type="button" class="flex justify-center items-center w-48 mx-auto text-black border-dashed border-2 border-gray-500 hover:bg-slate-300 py-2 px-8 focus:outline-none rounded text-lg" href="<?= PATH ?>index.php">Salir <i class='bx bx-run '></i></a>
+        </div>
 </body>
 </html>
