@@ -5,10 +5,25 @@
 /* My componens */
 
 .primary_btn{
-    @apply w-max text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-base px-5 py-2.5 mr-2 mb-2  flex justify-center items-center
+    @apply w-max text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-base px-5 py-2.5 flex justify-center items-center
 }
-
+.cancel_btn{
+    @apply w-max border-gray-300  text-gray-900 focus:outline-none bg-white border  hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 rounded-lg text-base px-5 py-2.5 flex justify-center items-center
+}
 /* table */
 .border-r{
     @apply border-r-2 border-gray-500
+}
+/* btn the for table */
+.btn_update{
+    @apply flex p-2.5 bg-green-500 rounded-xl hover:rounded-3xl hover:bg-green-600 transition-all duration-300 text-white
+}
+
+.btn_trash{
+    @apply flex p-2.5 bg-red-500 rounded-xl hover:rounded-3xl hover:bg-red-600 transition-all duration-300 text-white
+}
+
+/*card new project */
+.card_project{
+    @apply w-64 h-20 rounded shadow-sm flex justify-center items-center m-3 bg-gray-100 border hover:bg-slate-300 transition-all hover:transition
 }

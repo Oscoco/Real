@@ -8,9 +8,9 @@
                     </a>
 
                     <div class="nav__list">
-                        <a href="<?=PATH?>admin/" class="nav__link active">
-                        <i class='bx bx-grid-alt nav__icon' ></i>
-                            <span class="nav__name">Admintrador</span>
+                        <a href="<?=PATH?>admin/" class="nav__link  ">
+                        <i class='bx bx-grid-alt nav__icon ' ></i>
+                            <span class="nav__name">Administrador</span>
                         </a>
 
                         <a href="<?=PATH?>admin/personal/" class="nav__link">
@@ -24,9 +24,10 @@
                             <span class="nav__name">Proyectos</span>
                         </a>
 
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
-                            <span class="nav__name">sadasdasd</span>
+                        <a href="<?=PATH?>admin/armament/" class="nav__link">
+                         
+                            <i class='bx bx-collection nav__icon'></i>
+                            <span class="nav__name">Armamento</span>
                         </a>
                     </div>
                 </div>

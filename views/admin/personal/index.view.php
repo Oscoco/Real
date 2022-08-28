@@ -10,15 +10,31 @@
 
     
     <div class="text-center py-5 pt-20 text-4xl ">
-        <h1 class="">Personal activo</h1>
+        <h1 class="mt-4">Personal Activo</h1>
     </div>
     
     <div class="py-3">
         <p>Administrador / <span class="text-blue-800">Personal Activo</span> </p>
     </div>
     
-    <div class="flex justify-center sm:justify-start py-3">
-        <a href="<?=PATH?>" type="" class="primary_btn">Nuevo Personal <i class='bx bx-user-plus px-1'></i></a>
+    <div class="flex py-3 sm:justify-between justify-center items-center flex-wrap">
+
+        <a href="<?=PATH?>admin/personal/new.personal.php" type="" class="primary_btn my-4">Nuevo Personal <i class='bx bx-user-plus px-1'></i></a>
+
+            <form class="flex items-center my-4 mx-2">   
+                <label for="simple-search" class="sr-only">Buscar</label>
+                <div class="relative w-full">
+                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                        <i class='bx bx-search w-5 h-5 text-gray-500' ></i>
+                    </div>
+                    <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="Buscar" required>
+                </div>
+                <button type="submit" class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                    <i class='bx bx-search text-base' ></i>
+                    <span class="sr-only">Search</span>
+                </button>
+            </form>
+
     </div>
     
     <section>
@@ -57,9 +73,16 @@
                         <td class="py-4 px-6">
                             MOVIKAL CASA MATRIZ   
                         </td>
-                        <td class="py-4 px-6 text-center">
-                            <a href="#" class="text-blue-600 hover:underline">Edit</a>
-                        </td>
+                        <td class="py-4 bg-gray-50">
+                        <div class='flex items-center justify-center'>
+                            <button class="btn_update">
+                            <i class='bx bx-edit' ></i>
+                            </button>
+                            <button class="mx-2 btn_trash" data-modal-toggle="popup-modal">
+                            <i class='bx bxs-trash' ></i>
+                            </button>
+                        </div>
+                    </td>
                     </tr>
                     <tr class="bg-white border-b text-black hover:bg-gray-200">
                         <th scope="col" class="py-3 px-5 border-r w-max text-center">
