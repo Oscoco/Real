@@ -11,7 +11,7 @@
 <body class=" bg-gray-200 font-bold px-0">
 
         <div class="text-center py-10">
-            <h2 class="text-3xl">Sitema de Registro</h2>
+            <h2 class="text-3xl">Sistema de Registro</h2>
             <h2 class="text-xl pb-5 sm:mx-10 mx-5">REAL BROTHERS SECURITY S.A DE C.V</h2>
         </div>
 
@@ -19,7 +19,7 @@
 
     <div class="sm:mx-5 mx-5 p-4 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8 font-bold">
         <form class="space-y-6 text-black" action="#">
-            <h5 class="text-3xl mx-5 text-center text-black">Inicio de Secesión</h5>
+            <h5 class="text-3xl mx-5 text-center text-black">Inicio de Sesión</h5>
             <div>
                 <label for="name" class="block mb-2 text-2xl">Nombre de usuario<span class="text-red-500">*</span></label>
                 <input type="name" name="email" id="email" class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Tu nombre" required="">

@@ -8,9 +8,20 @@
 </head>
 <body class="bg-gray-200" id="body-pd">
 
-    <div class="text-center py-5 text-3xl ">
-        <h1 class="">Proyectos actuales</h1>
+    <div class="text-center py-5 pt-20 m-4">
+        <h1 class="text-4xl">Real Brothers Security</h1>
+        <h3 class="text-gray-700">Panel Administrativo</h3>
     </div>
-asdasdasd
+
+    <div class="py-3">
+        <p> <span class="text-blue-800">Administrador / Home</span> </p>
+    </div>
+    
+
+    <section class="bg-red-500 w-full h-8">
+        <div>
+
+        </div>
+    </section>
 </body>
 </html>

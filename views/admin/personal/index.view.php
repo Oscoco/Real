@@ -76,7 +76,7 @@
                         <td class="py-4 bg-gray-50">
                         <div class='flex items-center justify-center'>
                             <button class="btn_update">
-                            <i class='bx bx-edit' ></i>
+                            <a href="<?=PATH?>admin/personal/actualizar.php" class='bx bx-edit' ></a>
                             </button>
                             <button class="mx-2 btn_trash" data-modal-toggle="popup-modal">
                             <i class='bx bxs-trash' ></i>

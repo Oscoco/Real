@@ -19,7 +19,7 @@
                         </a>
                         
 
-                        <a href="<?=PATH?>admin/proyectos/proyectos.php" class="nav__link">
+                        <a href="<?=PATH?>admin/proyectos/" class="nav__link">
                             <i class='bx bx-folder nav__icon' ></i>
                             <span class="nav__name">Proyectos</span>
                         </a>
