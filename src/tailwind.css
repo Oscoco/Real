@@ -32,3 +32,12 @@
 .card_project{
     @apply w-64 h-20 rounded shadow-sm flex justify-center items-center m-3 bg-gray-100 border hover:bg-slate-300 transition-all hover:transition
 }
+
+/* update data users */
+
+.text-label{
+    @apply block mb-2 text-gray-900
+}
+.input-space{
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+}

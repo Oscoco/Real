@@ -186,8 +186,6 @@ a{
   .show{
     width: calc(var(--nav-width) + 156px);
   }
-
-  /*Add padding body desktop*/
   .body-pd{
     padding-left: calc(var(--nav-width) + 188px);
   }

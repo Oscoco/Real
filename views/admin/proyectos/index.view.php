@@ -17,13 +17,13 @@
     </div>
 
     <div>
-        <a href="<?=PATH?>" type="" class="primary_btn my-4">Nuevo Proyecto<i class='bx bx-folder-plus px-1'></i></a>
+        <a href="<?=PATH?>admin/proyectos/new.proyecto.php" type="" class="primary_btn my-4">Nuevo Proyecto<i class='bx bx-folder-plus px-1'></i></a>
     </div>
 
     <section class="w-fullp-3 flex justify-center">
         <div class="flex flex-wrap justify-center bg-white w-3/4 border rounded-lg shadow-md py-7">
 
-            <a href="#" class="card_project">
+            <a href="<?=PATH?>admin/proyectos/actualizar.php" class="card_project">
                 <p class="text-center">
                 name Project example 01
                 </p>

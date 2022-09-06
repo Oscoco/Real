@@ -18,10 +18,6 @@
     </div>
     
 
-    <section class="bg-red-500 w-full h-8">
-        <div>
-
-        </div>
-    </section>
+    
 </body>
 </html>

@@ -54,6 +54,9 @@
                         <th scope="col" class="py-3 px-6">
                             Proyecto
                         </th>
+                        <th scope="col" class="py-3 px-6">
+                            Telefono
+                        </th>
                         <th scope="col" class="py-3 px-6 text-center">
                             Acciones
                         </th>
@@ -68,18 +71,23 @@
                             Name example
                         </th>
                         <td class="py-4 px-6">
-                            Sliver
+                            0001
                         </td>
                         <td class="py-4 px-6">
                             MOVIKAL CASA MATRIZ   
                         </td>
+                        <td class="py-4 px-6">
+                            2222-2222   
+                        </td>
                         <td class="py-4 bg-gray-50">
                         <div class='flex items-center justify-center'>
-                            <button class="btn_update">
-                            <a href="<?=PATH?>admin/personal/actualizar.php" class='bx bx-edit' ></a>
+
+                            <button type="submit">
+                                <a href="<?=PATH?>admin/personal/actualizar.php" class='bx bx-edit btn_update' ></a>
                             </button>
-                            <button class="mx-2 btn_trash" data-modal-toggle="popup-modal">
-                            <i class='bx bxs-trash' ></i>
+
+                            <button type="submit"  data-modal-toggle="popup-modal">
+                                <a href="" class="mx-2 btn_trash"> <i class='bx bxs-trash' ></i></a>
                             </button>
                         </div>
                     </td>
@@ -95,7 +103,10 @@
                             White
                         </td>
                         <td class="py-4 px-6">
-                            MOVIKAL CASA MATRIZ   
+                            MOVIKAL CASA MATRIZ 
+                        </td>
+                        <td class="py-4 px-6">
+                             3333-3333   
                         </td>
                         <td class="py-4 px-6 text-center">
                             <a href="#" class="font-medium text-blue-600 ">Edit</a>
