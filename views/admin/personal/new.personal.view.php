@@ -32,50 +32,69 @@
             <form class="">
                 <div class="grid gap-5 mb-6 md:grid-cols-2">
                     <div>
-                        <label for="first_name" class="text-label">Nombres</label>
+                        <label for="first_name" class="text-label">Nombres <span class="active-text">*</span></label>
                         <input type="text" id="first_name" class="input-space" placeholder="" required="">
                     </div>
                     <div>
-                        <label for="last_name" class="text-label">Apellidos</label>
+                        <label for="last_name" class="text-label">Apellidos<span class="active-text">*</span></label>
                         <input type="text" id="last_name" class="input-space " placeholder="" required="">
                     </div>
                     <div>
-                        <label class="text-label">Telefono</label>
+                        <label class="text-label">Telefono <span class="active-text">*</span></label>
                         <input type="tel" id="phone" class="input-space" placeholder="" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required="">
                     </div>
                     <div>
-                        <label class="text-label">Dui</label>
+                        <label class="text-label">Dui <span class="active-text">*</span></label>
                         <input type="text" id="first_name" class="input-space" placeholder="" required="">
                     </div>
                     <div>
                         <label class="text-label">NIT</label>
-                        <input type="text" id="last_name" class="input-space" placeholder="" required="">
+                        <input type="text" id="last_name" class="input-space" placeholder="">
                     </div>
                     <div>
                         <label class="text-label">ISSS</label>
-                        <input type="" id="" class="input-space" placeholder="" required="">
+                        <input type="" id="" class="input-space" placeholder="" >
                     </div>
                     <div>
                         <label class="text-label">Nº Licencia</label>
-                        <input type="" id="" class="input-space " placeholder="" required="">
+                        <input type="" id="" class="input-space " placeholder="" >
                     </div>
                     <div>
                         <label class="text-label">Fecha Vencimiento</label>
-                        <input type="date" id="" class="input-space " placeholder="" required="">
+                        <input type="date" id="" class="input-space " placeholder="" >
                     </div>
                     <div>
                         <label class="text-label">Fecha de Ingreso</label>
                         <input type="date" id="" class="input-space " placeholder="" required="">
                     </div>
-                    <div >
-                        <label class="text-label">Fecha de baja</label>
-                        <input type="date" id="" class="input-space " placeholder="" required="">
+                    <div>
+                        <label class="text-label">Fecha de salida </label>
+                        <input type="date" id="" class="input-space " placeholder="">
+                    
                     </div>
+                    <div>
+                        <label class="text-label">Numero de cuenta</label>
+                        <input type="number" id="" class="input-space " placeholder="" >
+                    </div>
+                    <div>
+                        <label class="text-label">Banco</label>
+                        <select id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                <option>Selecciona</option>
+                                <option>AGRICOLA</option>
+                                <option>ATLANTIDA</option>
+                                <option>DAVIVENDA</option>
+                                <option>HIPOTECARIO</option>
+                        </select>
+                    </div>
+                    <!-- <div >
+                        <label class="text-label">Fecha de baja</label>
+                        <input type="date" id="" class="input-space" placeholder="">
+                    </div> -->
                 </div>
                 <div class="mb-6">
                     <div>
-                        <label for="countries" class="text-label">Posicion - Proyecto</label>
-                        <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                        <label class="text-label">Posicion - Proyecto</label>
+                        <select id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                             <option selected>Proyecto activo</option>
                             <option>Movical</option>
                         </select>

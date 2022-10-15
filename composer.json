@@ -1,0 +1,20 @@
+{
+    "nombre": "Real",
+    "description": "sistem",
+    "type":"project",
+    "license": "MIT",
+    "authors":  [
+        {
+            "name": "Oscoco",
+            "email": "oscargonz150@gmail.com"
+        }
+    ],
+    "require": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "Real\\":"src/"
+        }
+    }
+}

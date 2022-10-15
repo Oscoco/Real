@@ -1,5 +1,9 @@
 <?php 
     session_start();
+
+    if (empty($_SESSION["id"])) {
+        header("location: ../../404.php"); //redireccion de seguridad
+    }
     
     require '../../config/functions.php';
     require '../../config/config.php';
