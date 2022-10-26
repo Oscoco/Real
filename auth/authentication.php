@@ -10,6 +10,12 @@ if (!empty($_POST ["login"])){
             $_SESSION["id"]=$datos->id;
             $_SESSION["name"]=$datos->name;
             $_SESSION["lastname"]=$datos->lastname;
+            // datos del usuario
+            $_SESSION["phone"]=$datos->phone;
+            $_SESSION["twothone"]=$datos->twothone;
+            $_SESSION["dui"]=$datos->dui;
+            $_SESSION["email"]=$datos->email;
+            $_SESSION["categoryUser"]=$datos->categoryUser;
             header("location: ./admin/index.php");
         } else{
             // completar los campos

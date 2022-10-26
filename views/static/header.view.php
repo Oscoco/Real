@@ -20,13 +20,17 @@
             </div>
         </button>
 
-        <div id="menu" class="hidden absolute z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow ">
+        <div id="menu" class="hidden absolute z-10 w-48 bg-white rounded-md divide-y divide-gray-100 shadow ">
             <ul class="py-1 text-sm text-gray-700">
+                
                 <li>
-                    <a href="<?=PATH?>admin/auth/" class="block py-2 px-4 hover:bg-gray-100">Nuevo usuario</a>
+                    <a href="<?=PATH?>admin/auth/" class="block py-2 px-4 hover:bg-gray-100">Mi usuario</a>
                 </li>
                 <li>
-                    <a href="<?=PATH?>auth/destroySession.php" class=" flex content-center items-center py-2 px-4 hover:bg-red-500 hover:text-white p-1">Salir <i class='bx bx-log-out text-base p-1'></i></a>
+                    <a href="<?=PATH?>admin/auth/Users.php" class="block py-2 px-4 hover:bg-gray-100">Usuarios</a>
+                </li>
+                <li>
+                    <a href="<?=PATH?>auth/destroySession.php" class=" flex content-center items-center py-2 px-4 hover:bg-red-500 hover:text-white p-1 ">Salir <i class='bx bx-log-out text-base p-1' ></i></a>
                 </li>
             </ul>
         </div>

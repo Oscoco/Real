@@ -12,6 +12,9 @@
     require '../views/static/header.view.php';
     require '../views/static/nav.view.php';
     require '../views/admin/index.view.php';
+
+    require '../components/longout.php';
+
     
     require '../views/static/footer.view.php';
 

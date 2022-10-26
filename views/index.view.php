@@ -22,12 +22,12 @@
                 </div>
 
                 <div class="mb-6">
-                    <label id="user" class="block mb-2 text-base text-gray-900">Usuario</label>
+                    <label id="user" class="block mb-2 text-base text-gray-900">Usuario <?php require "components/require.php";?></label>
 
                     <input type="user" id="user" name="user" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Usuario">
                 </div>
                 <div class="mb-6">
-                    <label for="password" class="block mb-2 text-base text-gray-900">Contraseña</label>
+                    <label for="password" class="block mb-2 text-base text-gray-900">Contraseña <?php require "components/require.php";?></label>
 
                     <input type="password" id="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="**********">
                 </div>

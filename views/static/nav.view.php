@@ -27,14 +27,18 @@
                         <a href="<?=PATH?>admin/armament/" class="nav__link">
                          
                             <i class='bx bx-collection nav__icon'></i>
-                            <span class="nav__name">Armamento</span>
+                            <span class="nav__name ">Armamento</span>
                         </a>
                     </div>
                 </div>
-
-                <a href="<?=PATH?>index.php" class="nav__link text-white">
-                    <i class='bx bx-log-out nav__icon' ></i>
-                    <span class="nav__name">Salir</span>
-                </a>
+                
+                    <a href="<?=PATH?>auth/destroySession.php" class="nav__link">
+                        <i class='bx bx-log-out nav__icon' ></i>
+                        <div class="nav__name">Salir</div>
+                       
+                    </a>
+               
+                
             </nav>
         </div>
+

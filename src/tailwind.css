@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 /* My componens */
-
+body{
+    @apply !bg-gray-200
+}
 /* text-active */
 .active-text{
     @apply text-blue-800
