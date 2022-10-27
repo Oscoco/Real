@@ -28,7 +28,7 @@
                         <?php  echo $_SESSION["name"]." ".$_SESSION["lastname"];  ?>
                     </p>
                     <p class="text-white text-md mt-1 bg-blue-700 p-2 rounded-lg">
-                        <?php echo $_SESSION["categoryUser"]?>
+                        <?php echo $_SESSION["rolid"]?>
                     </p>
                 </div>
         </div>

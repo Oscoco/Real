@@ -35,6 +35,9 @@
                             Nombres
                         </th>
                         <th scope="col" class="py-3 px-6">
+                            Apellido
+                        </th>
+                        <th scope="col" class="py-3 px-6">
                             Rol de usuario
                         </th>
                         <th scope="col" class="py-3 px-6">
@@ -46,24 +49,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-white border-b text-black font-bold hover:bg-gray-200">
+                    <!-- <tr class="bg-white border-b text-black font-bold hover:bg-gray-200">
                         <th scope="col" class="py-3 px-5 border-r w-max text-center">
-                            1
+                            
                         </th>
                         <th scope="row" class="py-4 px-6 whitespace-nowrap ">
-                            <?php
-                                echo $_SESSION["name"]." ". $_SESSION["lastname"];
-                            ?>
+                        
                         </th>
                         <td class="py-4 px-6">
-                            <?php
-                                echo $_SESSION["categoryUser"];
-                            ?>
+                         
                         </td>
                         <td class="py-4 px-6">
-                        <?php
-                                echo $_SESSION["phone"];
-                            ?>
+                        
                         </td>
                         <td class="py-4 bg-gray-50">
                         <div class='flex items-center justify-center'>
@@ -77,8 +74,44 @@
                             </button>
                         </div>
                     </td>
+                    </tr> -->
+                    <?php
+                        require '../../config/conexion.php';
+                        $sql=$conexion->query("select * from usuario");
+                        while ($data=$sql->fetch_object()){?>
+                        <tr class="bg-white border-b text-black font-bold hover:bg-gray-200">
+                        <th scope="col" class="py-3 px-5 border-r w-max text-center">
+                            <?= $data->id ?>
+                        </th>
+                        <th scope="row" class="py-4 px-6 whitespace-nowrap ">
+                            <?= $data->name ?>
+                        </th>
+                        <th scope="row" class="py-4 px-6 whitespace-nowrap ">
+                            <?= $data->lastname ?>
+                        </th>
+                        <td class="py-4 px-6">
+                            <?= $data->rolid ?>
+                        </td>
+                        <td class="py-4 px-6">
+                            <?= $data->phone ?>
+                        </td>
+                        <td class="py-4 bg-gray-50">
+                        <div class='flex items-center justify-center'>
+
+                            <button type="submit">
+                                <a href="" class='bx bx-edit btn_update'></a>
+                            </button>
+
+                            <button type="submit"  data-modal-toggle="popup-modal">
+                                <a href="" class="mx-2 btn_trash"> <i class='bx bxs-trash'></i></a>
+                            </button>
+                        </div>
+                    </td>
                     </tr>
-                   
+
+                    <?php  }
+
+                    ?>              
                    
                 </tbody>
             </table>

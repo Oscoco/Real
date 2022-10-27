@@ -15,7 +15,7 @@ if (!empty($_POST ["login"])){
             $_SESSION["twothone"]=$datos->twothone;
             $_SESSION["dui"]=$datos->dui;
             $_SESSION["email"]=$datos->email;
-            $_SESSION["categoryUser"]=$datos->categoryUser;
+            $_SESSION["rolid"]=$datos->rolid;
             header("location: ./admin/index.php");
         } else{
             // completar los campos
