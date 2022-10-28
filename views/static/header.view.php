@@ -30,10 +30,13 @@
                     <a href="<?=PATH?>admin/auth/Users.php" class="block py-2 px-4 hover:bg-gray-100">Usuarios</a>
                 </li>
                 <li>
-                    <a href="<?=PATH?>auth/destroySession.php" class=" flex content-center items-center py-2 px-4 hover:bg-red-500 hover:text-white p-1 ">Salir <i class='bx bx-log-out text-base p-1' ></i></a>
+                    <a class="modal-open flex content-center items-center py-2 px-4 hover:bg-red-500 hover:text-white p-1 ">Salir <i class='bx bx-log-out text-base p-1' ></i></a>
                 </li>
             </ul>
         </div>
-
     </div>
 </header>
+<!-- modal de session -->
+<?php
+    require '../../components/longout.php';
+?>

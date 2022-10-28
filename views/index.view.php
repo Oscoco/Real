@@ -18,11 +18,7 @@
 
                 <form method="POST" action="" class="w-full sm:p-10 p-5 flex justify-center items-center px-10">
 
-                    <div class=" sm:w-2/5 md:w-2/5 max-w-3xl bg-white rounded-lg space-y-6 p-10">
-                        <div>
-                            <h1 class="text-center text-2xl text-gray-700">Completa los campos</h1>
-                        </div>
-
+                    <div class=" sm:w-2/4 md:w-2/5 max-w-2xl bg-white rounded-2xl space-y-6 p-10 shadow-md">
                         <div class="mb-6">
                             <label id="user" class="block mb-2 text-base text-gray-900">Usuario <?php require "components/require.php"; ?></label>
 

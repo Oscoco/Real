@@ -16,7 +16,7 @@ if (!empty($_POST ["login"])){
             $_SESSION["dui"]=$datos->dui;
             $_SESSION["email"]=$datos->email;
             $_SESSION["rolid"]=$datos->rolid;
-            header("location: ./admin/index.php");
+            header("location: ./admin/personal/index.php");
         } else{
             // completar los campos
             require "./components/incorrect-data.php";

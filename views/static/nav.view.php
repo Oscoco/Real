@@ -8,10 +8,10 @@
                     </a>
 
                     <div class="nav__list">
-                        <a href="<?=PATH?>admin/" class="nav__link  ">
-                        <i class='bx bx-grid-alt nav__icon ' ></i>
+                        <!-- <a href="<?=PATH?>admin/" class="nav__link  ">
+                        <i class='bx bx-grid-alt nav__icon ' ></i> Solucionar error del modal en esta vista
                             <span class="nav__name">Administrador</span>
-                        </a>
+                        </a> -->
 
                         <a href="<?=PATH?>admin/personal/" class="nav__link">
                             <i class='bx bx-user nav__icon' ></i>
@@ -32,12 +32,14 @@
                     </div>
                 </div>
                 
-                    <a href="<?=PATH?>auth/destroySession.php" class="nav__link">
+                    <a href="<?=PATH?>components/longout.php" class="modal-open nav__link">
                         <i class='bx bx-log-out nav__icon' ></i>
                         <div class="nav__name">Salir</div>
-                       
                     </a>
-               
+                    <!-- modal de session -->
+                    <?php
+                        require '../../components/longout.php';
+                    ?>
                 
             </nav>
         </div>
