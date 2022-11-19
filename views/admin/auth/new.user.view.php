@@ -16,15 +16,16 @@
 
         <div class="pt-3">
             <p>Administrador / <span class="active-text">Nuevo administrador</span> </p>
-            <a href="<?= PATH ?>admin/auth/Users.php" type="" class="primary_btn my-4 m-3"><i class='bx bx-arrow-back px-1'></i>Regresar</a>
+            <a href="<?=PATH?>admin/auth/Users.php" type="" class="primary_btn my-4 m-3"><i class='bx bx-arrow-back px-1'></i>Regresar</a>
         </div>
 
     </section>
     <section class="w-full h-auto flex flex-wrap justify-center pb-8">
 
         <div class="bg-white w-max m-2 rounded-xl shadow-md flex flex-col justify-center container ">
-            <div class="text-center sm:px-4 px-10 pb-8">
-                <div class="flex justify-center items-center w-full">
+            <div class="text-center sm:p-4 p-2 ">
+            <!-- ARRIBA sm:px-4 px-10 pb-8 -->
+            <!-- <div class="flex justify-center items-center w-full">
                     <label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer ">
                         <div class="flex flex-col justify-center items-center pt-5 pb-6">
                             <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -33,21 +34,37 @@
                             <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Haga clic para subir</span></p>
                             <p class="text-xs text-gray-500 mx-10">PNG, JPG (MAX. 800x400px)</p>
                         </div>
-                        <input id="dropzone-file" accept="image/png, image/gif, image/jpeg" type="file" class="hidden" />
+                        <input id="dropzone-file" onchange="readURL(this);" accept="image/png, image/gif, image/jpeg" type="file" class="hidden" />
                     </label>
+                </div> -->
+
+            
+                <div class="file-upload m-2 rounded-xl shadow-md flex flex-col justify-center container">
+                    <div class="image-upload-wrap rounded-xl h-64">
+                        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                        <div class="drag-text">
+                            <i class='bx bxs-file-image text-5xl'></i>
+                            <p class="font-semibold hover:text-blue-600">Haga clic para subir</p>
+                            <p class="text-xs text-gray-500 mx-10">PNG, JPG (MAX. 800x400px)</p>
+                        </div>
+                    </div>
+
+                    <div class="file-upload-content rounded-xl shadow-md">
+                        <div class="flex justify-center items-center flex-col py-2">
+                            <img class="file-upload-image" src="#" alt="your image" />
+                        </div>
+                        <div class="image-title-wrap p-3 ">
+                        <button type="button" onclick="removeUpload()" class="remove-image rounded-xl">Eliminar: <span class="image-title">Uploaded Image</span></button>
+                        </div>
+                    </div>
                 </div>
-                <div class="py-4">
-                    <p>Agregar una imagen</p>
-                </div>
-                <div class="active-text text-xl">
-                    <p>name img </p>
-                </div>
+                    
 
             </div>
         </div>
 
         <div class="bg-white m-2 rounded-xl shadow-md md:w-2/3 w-full px-4">
-            <h2 class="p-5 text-xl text-center">Datos del administrador</h2>
+            <h2 class="p-5 text-2xl text-center">Datos del administrador</h2>
             <form class="" method="GET">
                 <div class="grid gap-6 mb-6 md:grid-cols-2 px-8">
                     <div>
@@ -68,7 +85,7 @@
                     </div>
                     <div>
                         <label for="" class="text-label ">Correo electronico</label>
-                        <input type="email" id="email" class="input-space" placeholder="john.doe@ejemplo.com" required>
+                        <input type="email" id="email" class="input-space" placeholder="john.doe@ejemplo.com" >
                     </div>
                     <div>
                         <label for="company" class="text-label ">Dui <?php require '../../components/require.php'; ?></label>
@@ -79,7 +96,9 @@
                 <div class="mb-6 px-8">
                     <label for="default" class="text-label">Rol del administrador <?php require '../../components/require.php'; ?></label>
                     <select id="default" class="input-space">
-                        <option selected>Seleccionar el rol</option>
+                        <option >Seleccionar el rol</option>
+                        <option value="1">Programador</option>
+
                        
                     </select>
                 </div>
@@ -96,3 +115,24 @@
 </body>
 
 </html>
+
+
+<!-- ver foto -->
+ <!--   se nesecita jquery
+        y un poco de js
+<div class="col file-upload pt-0">
+    <div class="image-upload-wrap">
+        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+        <div class="drag-text">
+        <i class='bx bxs-file-image display-4 '></i>
+        <p>Selecciona la imagen o arrastrala aqui.</p>
+        </div>
+    </div>
+
+    <div class="file-upload-content">
+        <img class="file-upload-image" src="#" alt="your image" />
+        <div class="image-title-wrap mt-0">
+        <button type="button" onclick="removeUpload()" class="remove-image">Eliminar: <span class="image-title">Uploaded Image</span></button>
+        </div>
+    </div>
+</div> -->

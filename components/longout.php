@@ -6,8 +6,8 @@
       <div class="relative max-w-md h-full md:h-auto modal-container w-auto md:max-w-md mx-auto rounded shadow-lg z-50">
         <div class="relative bg-white rounded-lg shadow">
           <button type="button" class="modal-close absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center justify-center" data-modal-toggle="popup-modal">
-            <i class='bx bx-x modal-close text-xl'></i>
-            <span class="sr-only">Close modal</span>
+            <i class='bx bx-x text-xl'></i>
+    
           </button>
           <div class="p-6 text-center">
             <i class='bx bx-error-circle mx-auto mb-4 text-6xl text-gray-600'></i>

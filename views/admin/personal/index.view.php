@@ -74,7 +74,7 @@
                             0001
                         </td>
                         <td class="py-4 px-6">
-                            MOVIKAL CASA MATRIZ   
+                            MOVIKAL CASA MATRIZ3   
                         </td>
                         <td class="py-4 px-6">
                             2222-2222   
@@ -92,26 +92,7 @@
                         </div>
                     </td>
                     </tr>
-                    <tr class="bg-white border-b text-black hover:bg-gray-200">
-                        <th scope="col" class="py-3 px-5 border-r w-max text-center">
-                            2
-                        </th>
-                        <th scope="row" class="py-4 px-6 whitespace-nowrap ">
-                            Name example
-                        </th>
-                        <td class="py-4 px-6">
-                            White
-                        </td>
-                        <td class="py-4 px-6">
-                            MOVIKAL CASA MATRIZ 
-                        </td>
-                        <td class="py-4 px-6">
-                             3333-3333   
-                        </td>
-                        <td class="py-4 px-6 text-center">
-                            <a href="#" class="font-medium text-blue-600 ">Edit</a>
-                        </td>
-                    </tr>
+                  
                    
                 </tbody>
             </table>

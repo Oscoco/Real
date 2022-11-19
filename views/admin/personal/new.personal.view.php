@@ -23,8 +23,10 @@
         <a href="<?= PATH ?>admin/personal/" type="" class="cancel_btn mx-5"><i class='bx bx-arrow-back px-1'></i>Volver</a>
     </div>
      -->
+    
+
     <section>
-        <form method="GET" class="w-full flex flex-wrap justify-center items-start ">
+        <form method="POST" action="../../admin/acciones.php" class="w-full flex flex-wrap justify-center items-start ">
             <div class="bg-white w-full sm:w-3/5 sm:mx-10 rounded-xl shadow-md p-8 mb-5">
                 <div>
                     <h1 class="active-text text-2xl mb-4 ">Datos del perfil</h1>
@@ -33,7 +35,7 @@
                     <div class="grid gap-5 mb-6 md:grid-cols-2">
                         <div>
                             <label for="first_name" class="text-label">Nombres <?php require '../../components/require.php';?></label>
-                            <input type="text" id="first_name" class="input-space" placeholder="" required="">
+                            <input type="name" id="first_name" class="input-space" placeholder="" required="">
                         </div>
                         <div>
                             <label for="last_name" class="text-label">Apellidos <?php require '../../components/require.php';?></label>
@@ -61,29 +63,25 @@
                         </div>
                         <div>
                             <label class="text-label">Fecha Vencimiento</label>
-                            <input type="date" id="" class="input-space " placeholder="" >
+                            <input type="date" id="" class="input-space" placeholder="" >
                         </div>
                         <div>
                             <label class="text-label">Fecha de Ingreso <?php require '../../components/require.php';?></label>
-                            <input type="date" id="" class="input-space " placeholder="" required="">
+                            <input type="date" id="" class="input-space" placeholder="" required="">
                         </div>
                         <div>
                             <label class="text-label">Fecha de salida </label>
-                            <input type="date" id="" class="input-space " placeholder="">
+                            <input type="date" id="" class="input-space" placeholder="">
                         
                         </div>
                         <div>
                             <label class="text-label">Numero de cuenta</label>
-                            <input type="number" id="" class="input-space " placeholder="" >
+                            <input type="number" id="" class="input-space" placeholder="" >
                         </div>
                         <div>
                             <label class="text-label">Banco</label>
                             <select id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                                     <option>Selecciona</option>
-                                    <option>AGRICOLA</option>
-                                    <option>ATLANTIDA</option>
-                                    <option>DAVIVENDA</option>
-                                    <option>HIPOTECARIO</option>
                             </select>
                         </div>
                     </div>
@@ -135,6 +133,7 @@
         </form>
     </section>
 
+   
 
 </body>
 
