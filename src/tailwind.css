@@ -48,3 +48,14 @@ body{
 .alert-danger{
     @apply w-full bg-red-600 text-center text-white rounded-lg py-2 flex items-center justify-center
 }
+
+/* input value  */
+
+.inputbtn{
+   @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm w-full px-5 py-2.5 text-center
+}
+
+/* styles icons visible eyes */
+.icon-show{
+    @apply text-xl h-6 flex justify-center items-center p-5
+}

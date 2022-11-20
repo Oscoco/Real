@@ -24,10 +24,27 @@
 
                             <input type="user" id="user" name="user" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring focus:ring-blue-500 block w-full p-2.5" placeholder="Usuario">
                         </div>
-                        <div class="mb-6">
-                            <label for="password" class="block mb-2 text-base text-gray-900">Contraseña <?php require "components/require.php"; ?></label>
-
+                        <!-- <div class="mb-6">
+                            <label for="password" class="block mb-2 text-base text-gray-900">Contraseña</label>
                             <input type="password" id="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring focus:ring-blue-500 block w-full p-2.5 " placeholder="**********">
+                        </div> -->
+
+                        <div class="py-2" x-data="{ show: true }">
+                            <label class="text-label">Contraseña <?php require "components/require.php"; ?></label>
+                            
+                            <div class="relative">
+
+                            <input name="password" :type="show ? 'password' : 'text'" class="input-space">
+
+                            <div class="absolute inset-y-0 right-0 flex items-center text-sm leading-5 ">
+
+                                <i class='bx bx-low-vision text-gray-700 icon-show'fill="none" @click="show = !show"
+                                :class="{'hidden': !show, 'block':show }" ></i>
+                        
+                                <i class='bx bx bxs-low-vision text-blue-600 icon-show' fill="none" @click="show = !show"
+                                :class="{'block': !show, 'hidden':show }" ></i>
+                            </div>
+                            </div>
                         </div>
 
                         <input name="login" type="submit" class="text-white bg-blue-700 hover:bg-blue-800 transition-opacity focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm w-full px-5 py-2.5 text-center" value="Inicia sesión">
@@ -35,8 +52,7 @@
                         <!-- lerts  -->
                         <div>
                             <?php
-                            require "./config/conexion.php";
-                            require "./auth/authentication.php";
+                                require "./auth/authentication.php";
                             ?>
                         </div>
 
