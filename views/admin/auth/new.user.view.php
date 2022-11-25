@@ -28,7 +28,7 @@
                 <div class="text-center sm:p-4 p-2 ">
                     <div class="file-upload m-2 rounded-xl shadow-md flex flex-col justify-center container">
                         <div class="image-upload-wrap rounded-xl h-64">
-                            <input class="file-upload-input" type='file' name="photo" onchange="readURL(this);" accept="image/*" />
+                            <input class="file-upload-input" type='file' name="pho to" onchange="readURL(this);" accept="image/*" />
                             <div class="drag-text">
                                 <i class='bx bxs-file-image text-5xl'></i>
                                 <p class="font-semibold hover:text-blue-600">Haga clic para subir</p>
@@ -65,16 +65,12 @@
                             <label for="phone" class="text-label ">Usuario <?php require '../../components/require.php'; ?></label>
                             <input type="text" name="user" class="input-space" placeholder="Nombre de usuario" required>
                         </div>
-                        <!-- <div>
-                            <label for="phone" class="text-label ">Constraseña</label>
-                            <input type="password" name="password" class="input-space" placeholder="Segundo numero de contacto" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
-                        </div> -->
 
                         <div x-data="{ show: true }">
                             <label class="text-label">Contraseña <?php require '../../components/require.php'; ?></label>
                 
                             <div class="relative">
-                                <input name="password" :type="show ? 'password' : 'text'" class="input-space">
+                                <input  name="password" :type="show ? 'password' : 'text'" class="input-space" required>
                                 <div class="absolute inset-y-0 right-0 flex items-center text-sm leading-5 ">
                                     <i class='bx bx-low-vision text-xl h-6 text-gray-700 flex justify-center items-center p-5'fill="none" @click="show = !show"
                                     :class="{'hidden': !show, 'block':show }" ></i>
