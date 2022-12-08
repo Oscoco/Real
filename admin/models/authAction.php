@@ -1,18 +1,15 @@
 <?php 
-
     // print"<pre>";
     // print_r($_POST); 
-    // print_r($_FILES); 
-    // // todo lo que se envia del formulario
-    // // podemos ver el archivo fotos
-    // exit();
+    // print_r($_FILES); // podemos ver el archivo fotos
+
     require '../../vendor/autoload.php';
 
-    // $persona = new Real\User;
+    $user = new Real\Usuarios;
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-        if ($_POST['createUser'] === 'Agregar nuevo administrador') {
+        if ($_POST['createUser'] === 'Nuevo administrador') {
 
             if (empty($_POST['name']))
             exit("completa el nombre");
@@ -50,15 +47,15 @@
                 'email'=>$_POST['email'],
                 'dui'=>$_POST['dui'],
                 'rolid'=>$_POST['rolid'],
-                'photo'=> subirfoto()
+                'foto'=> subirfoto()
             );
 
-            $rpt = $persona->registrar($_params);
+            $rpt = $user->registrar($_params);
 
             // location para la direccion de reinicio
             
             if($rpt)
-                header('Location: ../persona/index.php');
+                header('Location: ../auth/Users.php');
                 // esto haciendo mencion de la carpeta raiz donde se envian los datos del post
             else
                 print 'Error Page al registrar';
@@ -82,11 +79,6 @@
 
 
             $_params = array(
-                // 'nombre'=>$_POST['nombre'],
-                // 'apellido'=>$_POST['apellido'],
-                // 'nacimiento'=> date('Y-m-d'),
-                // 'colorid'=>$_POST['colorid'],
-                // 'id'=>$_POST['id'],
                 'name'=>$_POST['name'],
                 'lastname'=>$_POST['lastname'],
                 'user'=>$_POST['user'],
@@ -102,15 +94,15 @@
 
             // validar por si no esta vacio
             if (!empty($_POST['foto_temp']))
-            $_params['photo'] = $_POST['foto_temp'];
+            $_params['foto'] = $_POST['foto_temp'];
 
-            if (!empty($_FILES['photo']['name']))
-            $_params['photo'] = subirfoto();
+            if (!empty($_FILES['foto']['name']))
+            $_params['foto'] = subirfoto();
 
-            $rpt = $persona->Actualizar($_params);
+            $rpt = $user->Actualizar($_params);
         
             if($rpt)
-                header('Location: ../persona/index.php');
+                header('Location: ../auth/Users.php');
                 // esto haciendo mencion de la carpeta raiz donde se envian los datos del post
             else
                 print 'Error Page al actualizar';
@@ -122,10 +114,10 @@
         // lo buscamos por id  por Get de la url
         $id =$_GET['id'];
 
-        $rpt = $persona->eliminar($id);
+        $rpt = $user->eliminar($id);
         
         if($rpt)
-            header('Location: ../persona/index.php');
+            header('Location: ../auth/Users.php');
     
         else
             print 'Error Page al eliminar';
@@ -139,15 +131,14 @@ function subirfoto(){
     $carpeta = __DIR__.'/../../upload/';
     // carpeta donde se colocan las imagenes
 
-    $archivo = $carpeta.$_FILES['photo']['name'];
+    $archivo = $carpeta.$_FILES['foto']['name'];
     // nombre con el que se sube 
 
 
-    move_uploaded_file($_FILES['photo']['tmp_name'],$archivo);
+    move_uploaded_file($_FILES['foto']['tmp_name'],$archivo);
     //  temporal mas la ruta 
 
-    return $_FILES['photo']['name'];
+    return $_FILES['foto']['name'];
 
 }
 
-?>

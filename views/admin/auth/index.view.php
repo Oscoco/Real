@@ -39,27 +39,27 @@
                 <div class="grid gap-6 mb-6 md:grid-cols-2 px-8">
                     <div>
                         <label for="first_name" class="text-label">Nombre</label>
-                        <input type="text" id="first_name" class="input-space" value="<?php print $_SESSION["name"] ?>"  disabled>
+                        <input type="text" id="first_name" class="input-space disabled-bg" value="<?php print $_SESSION["name"] ?>"  disabled>
                     </div>
                     <div>
                         <label for="last_name" class="text-label ">Apellidos</label>
-                        <input type="text" id="last_name" class="input-space" value="<?php print $_SESSION["lastname"] ?>"  disabled>
+                        <input type="text" id="last_name" class="input-space disabled-bg" value="<?php print $_SESSION["lastname"] ?>"  disabled>
                     </div>
                     <div>
                         <label for="phone" class="text-label ">Numero de telefono</label>
-                        <input for="disabled_filled" type="phone" id="" class="input-space" value="<?php print $_SESSION["phone"] ?>" disabled>
+                        <input for="disabled_filled" type="phone" id="" class="input-space disabled-bg" value="<?php print $_SESSION["phone"] ?>" disabled>
                     </div>
                     <div>
-                        <label for="twothone" class="text-label ">Numero de telefono (2)</label>
-                        <input type="twothone" class="input-space active-text" value="<?php print $_SESSION["twothone"] ?>" disabled>
+                        <label for="twophone" class="text-label ">Numero de telefono (2)</label>
+                        <input type="twophone" class="input-space disabled-bg" value="<?php print $_SESSION["twophone"] ?>" disabled>
                     </div>
                     <div>
                         <label for="" class="text-label ">Correo electronico</label>
-                        <input type="email" id="email" class="input-space" value="<?php print $_SESSION["email"] ?>"  disabled>
+                        <input type="email" id="email" class="input-space disabled-bg" value="<?php print $_SESSION["email"] ?>"  disabled>
                     </div>
                     <div>
                         <label for="" class="text-label ">Dui</label>
-                        <input type="dui" id="dui" class="input-space" value="<?php print $_SESSION["dui"] ?>" disabled>
+                        <input type="dui" id="dui" class="input-space disabled-bg" value="<?php print $_SESSION["dui"] ?>" disabled>
                     </div>
                 </div>
 

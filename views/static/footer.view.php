@@ -9,3 +9,5 @@
 <script src="<?=PATH?>assets/js/main.js"></script>
 
 <script src="<?=PATH?>assets/js/image.js"></script>
+
+<!-- <script src="<?=PATH?>assets/js/delete-account.js"></script> -->

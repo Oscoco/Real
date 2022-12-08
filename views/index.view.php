@@ -33,7 +33,7 @@
                     <label class="text-label">Contraseña <?php require "components/require.php"; ?></label>
 
                     <div class="relative">
-                        <input name="password" :type="show ? 'password' : 'text'" class="input-space">
+                        <input name="password" :type="show ? 'password' : 'text'" class="input-space" placeholder="*****">
 
                         <div class="absolute inset-y-0 right-0 flex items-center text-sm leading-5 ">
 
@@ -44,7 +44,7 @@
                     </div>
                 </div>
 
-                <input name="login" type="submit" class="text-white bg-blue-700 hover:bg-blue-800 transition-opacity focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm w-full px-5 py-2.5 text-center" value="Inicia sesión">
+                <input name="login" type="submit" class="text-white bg-blue-700 hover:bg-blue-800 transition-opacity focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm w-full px-5 py-2.5 text-center" value="Inicia sesión" >
 
                 <!-- lerts  -->
                 <div>

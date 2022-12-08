@@ -1234,7 +1234,8 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
-/* btn mocal == eliminar registro === cancelar */
+
+/* btn mocal == eliminar registro === cancelar and btn long-out */
 .btn-cancel {
   border-radius: 0.5rem;
   border-width: 1px;
@@ -1298,6 +1299,7 @@ body {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(252 165 165 / var(--tw-ring-opacity));
 }
+
 /*card new project */
 .card_project {
   margin: 0.75rem;
@@ -1326,7 +1328,6 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-
 /* update data users */
 
 .text-label {
@@ -1357,6 +1358,12 @@ body {
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
+}
+
+/* disiable-input */
+.disabled-bg {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
 
 /* alerts */

@@ -11,11 +11,11 @@
 <body id="body-pd">
     <section>
         <div class="text-center pb-1 pt-20 m-4">
-            <h1 class="text-4xl">Crea un nuevo administrador</h1>
+            <h1 class="text-4xl">Actualizar datos del administrador</h1>
         </div>
 
         <div class="pt-3">
-            <p>Administrador / <span class="active-text">Nuevo administrador</span> </p>
+            <p>Administrador / <span class="active-text">Actualizar Datos</span> </p>
             <a href="<?= PATH ?>admin/auth/Users.php" type="" class="primary_btn my-4 m-3"><i class='bx bx-arrow-back px-1'></i>Regresar</a>
         </div>
 
@@ -46,10 +46,11 @@
                         </div>
                     </div>
                 </div>
+                <h1 class="text-center">id foto (name)</h1>
             </div>
 
             <div class="bg-white m-2 rounded-xl shadow-md md:w-2/3 w-full px-4">
-                <h2 class="p-5 text-2xl text-center">Datos del administrador</h2>
+                <h2 class="p-5 text-2xl text-center">Actualizar datos</h2>
                 <div class="">
                     <div class="grid gap-6 mb-6 md:grid-cols-2 px-8">
                         <div>
@@ -108,7 +109,7 @@
                     </div>
 
                     <div class="pb-6 px-9">
-                        <input type="submit" name="createUser" class="inputbtn bg-blue-700" value="Nuevo administrador" >
+                        <input type="submit" name="createUser" class="inputbtn bg-blue-700" value="Agregar nuevo administrador" >
                     </div>
 
                 </div>

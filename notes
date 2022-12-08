@@ -24,15 +24,22 @@
             $sql = "INSERT INTO `proyecto`(`nombre`, `candidatos`, `fechainicio`, `fechafin`, `ubicacion`, `telefono`)
             VALUES (:nombre,:candidatos,:fechainicio,:fechafin,:ubicacion,:telefono)";
 
+            $sql = "INSERT INTO `usuario`(`user`, `password`, `name`, `lastname`, `phone`, `twophone`, `email`, `dui`, `rolid`, `foto`) 
+            VALUES (:user,:password,:name,:lastname,:phone,:twophone,:email,:dui,:rolid,:foto)";
+
             $resultado = $this->cn->prepare($sql);
 
             $_array = array (
-                ":nombre" => $_params['nombre'],
-                ":candidatos"=> $_params['candidatos'],
-                ":fechainicio"=> $_params['fechainicio'],
-                ":fechafin"=> $_params['fechafin'],
-                ":ubicacion"=> $_params['ubicacion'],
-                ":telefono" => $_params['telefono']
+                ":user" => $_params['user'],
+                ":password"=> $_params['password'],
+                ":name"=> $_params['name'],
+                ":lastname"=> $_params['lastname'],
+                ":phone" => $_params['phone'],
+                ":twophone" => $_params['twophone'],
+                ":email" => $_params['email'],
+                ":dui" => $_params['dui'],
+                ":rolid" => $_params['rolid'],
+                ":foto" => $_params['foto']
             );
 
             if ($resultado->execute($_array)) 
@@ -41,10 +48,12 @@
             return false;
             
         }
-
+       
         public function actualizar ($_params){
               // actualizamos los datos para la base de datos 
               $sql = "UPDATE `proyecto` SET `nombre`=:nombre,`candidatos`=:candidatos,`fechainicio`=:fechainicio,`fechafin`=:fechafin,`ubicacion`=:ubicacion,`telefono`=:telefono,`estado`=:estado WHERE `id`=:id";
+
+              $sql ="UPDATE `usuario` SET `user`=':nombre',`password`='[value-3]',`name`='[value-4]',`lastname`='[value-5]',`phone`='[value-6]',`twophone`='[value-7]',`email`='[value-8]',`dui`='[value-9]',`rolid`='[value-10]',`foto`='[value-11]' WHERE 1";
   
               $resultado = $this->cn->prepare($sql);
   
@@ -102,6 +111,5 @@
         }
     }
 
-?>
 
 

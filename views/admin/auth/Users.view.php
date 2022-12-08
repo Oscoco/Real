@@ -50,53 +50,67 @@
                         </th>
                     </tr>
                 </thead>
+                
                 <tbody>
-                    <?php
-                    require '../../config/conexion.php';
-                    $sql = $conexion->query("select * from usuario");
+                        <?php
+                            require '../../vendor/autoload.php';
+                            $user = new Real\Usuarios;
 
-                    while ($data = $sql->fetch_object()) { ?>
-
+                            $itemsUser = $user->mostrar();
+                            $cantidad = count($itemsUser);
+                            if($cantidad >0){
+                                $c=0;
+                            for($x =0; $x < $cantidad; $x++){
+                                $c++;
+                                $item = $itemsUser[$x];
+                        ?>
                         <tr class="bg-white border-b text-black font-bold hover:bg-gray-200">
                             <th scope="col" class="py-3 px-5 border-r w-max text-center">
-                                <?= $data->id ?>
+                                <?php print $c ?>
                             </th>
                             <th scope="row" class="py-4 px-6 whitespace-nowrap ">
-                                <?= $data->name ?>
+                                <?php print $item['name'] ?>
                             </th>
                             <th scope="row" class="py-4 px-6 whitespace-nowrap ">
-                                <?= $data->lastname ?>
+                                 <?php print $item['lastname'] ?>
                             </th>
                             <td class="py-4 px-6">
-                                <?= $data->rolid ?>
-                       
+                                 <?php print $item['nombrerol'] ?>
                             </td>
                             <td class="py-4 px-6">
-                                <?= $data->phone ?>
+                                 <?php print $item['phone'] ?>
                             </td>
                             <td class="py-4 bg-gray-50">
                                 <div class='flex items-center justify-center'>
+                                    <a href="<?=PATH?>admin/auth/ubdate.user.php" class="btn_update">
+                                       <i class='bx bx-edit'></i>
+                                    </a>
 
-                                    <button type="submit">
-                                        <a href="" class='bx bx-edit btn_update'></a>
-                                    </button>
-
-                                    <a href="<?= PATH ?>components/deteleaccount.php" class="modal-open-delete">
+                                    <a href="<?=PATH?>components/delete-account.php" class="modal-open-delete">
                                         <p class="mx-2 btn_trash"><i class='bx bxs-trash'></i></p>
                                     </a>
                                 </div>
                             </td>
                         </tr>
-
-                    <?php
-                    }
-                    ?>
-              
+                        <?php
+                            }
+                        }else{
+                        ?>
+                        <tr>
+                            <td colspan="5"> No hay nada pana </td>
+                        </tr>
+                            <?php
+                                }
+                            ?>
                 </tbody>
+
+
+
             </table>
         </div>
-    </section>
 
+    </section>
+<br>
 </body>
 
 </html>

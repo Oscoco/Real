@@ -12,7 +12,7 @@ if (!empty($_POST ["login"])){
             $_SESSION["lastname"]=$datos->lastname;
             // datos del usuario
             $_SESSION["phone"]=$datos->phone;
-            $_SESSION["twothone"]=$datos->twothone;
+            $_SESSION["twophone"]=$datos->twophone;
             $_SESSION["dui"]=$datos->dui;
             $_SESSION["email"]=$datos->email;
             $_SESSION["rolid"]=$datos->rolid;

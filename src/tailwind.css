@@ -33,13 +33,15 @@ body {
 .btn_trash {
     @apply flex p-2.5 bg-red-500 rounded-xl hover:rounded-3xl hover:bg-red-600 transition-all duration-300 text-white
 }
-/* btn mocal == eliminar registro === cancelar */
+
+/* btn modal == eliminar registro === cancelar and btn long-out */
 .btn-cancel{
     @apply text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm px-5 py-2.5 hover:text-gray-900 focus:z-10 
 }
 .btn-eliminar{
     @apply text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2
 }
+
 /*card new project */
 .card_project {
     @apply w-64 h-20 rounded shadow-sm flex justify-center items-center m-3 bg-gray-100 border hover:bg-slate-300 transition-all hover:transition
@@ -52,6 +54,11 @@ body {
 
 .input-space {
     @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+}
+
+/* disiable-input */
+.disabled-bg{
+    @apply bg-blue-100
 }
 
 /* alerts */
