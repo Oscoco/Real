@@ -54,10 +54,11 @@
                 <tbody>
                         <?php
                             require '../../vendor/autoload.php';
-                            $user = new Real\Usuarios;
 
+                            $user = new Real\Usuarios;
                             $itemsUser = $user->mostrar();
                             $cantidad = count($itemsUser);
+
                             if($cantidad >0){
                                 $c=0;
                             for($x =0; $x < $cantidad; $x++){
@@ -82,13 +83,15 @@
                             </td>
                             <td class="py-4 bg-gray-50">
                                 <div class='flex items-center justify-center'>
-                                    <a href="<?=PATH?>admin/auth/ubdate.user.php" class="btn_update">
+
+                                    <a href="<?=PATH?>admin/auth/ubdate.user.php?id=<?php print $item['id']?>" class="btn_update">
                                        <i class='bx bx-edit'></i>
                                     </a>
 
-                                    <a href="<?=PATH?>components/delete-account.php" class="modal-open-delete">
+                                    <a href="<?=PATH?>admin/models/authAction.php?id=<?php print $item['id']?>">
                                         <p class="mx-2 btn_trash"><i class='bx bxs-trash'></i></p>
                                     </a>
+
                                 </div>
                             </td>
                         </tr>
@@ -97,20 +100,21 @@
                         }else{
                         ?>
                         <tr>
-                            <td colspan="5"> No hay nada pana </td>
+                            <td colspan="5"> No hay registros </td>
                         </tr>
                             <?php
                                 }
                             ?>
                 </tbody>
-
-
-
             </table>
         </div>
 
     </section>
 <br>
+
 </body>
+
+
+
 
 </html>

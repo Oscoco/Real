@@ -15,6 +15,7 @@ if (!empty($_POST ["login"])){
             $_SESSION["twophone"]=$datos->twophone;
             $_SESSION["dui"]=$datos->dui;
             $_SESSION["email"]=$datos->email;
+            $_SESSION["foto"]=$datos->foto;
             $_SESSION["rolid"]=$datos->rolid;
             header("location: ./admin/personal/index.php");
         } else{
@@ -25,5 +26,6 @@ if (!empty($_POST ["login"])){
         // Datos vacios
         require "./components/alert-danger.php";
     }
+
 }
-?>
+

@@ -13,12 +13,6 @@
     require '../../views/static/header.view.php';
     require '../../views/static/nav.view.php';
     require '../../views/admin/auth/Users.view.php';
-
-    // componentes
-    require '../../components/delete-account.php';
-    // require '../../vendor/autoload.php';
-    
-    
     
     require '../../views/static/footer.view.php';
 

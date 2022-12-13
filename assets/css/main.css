@@ -589,6 +589,9 @@ video {
 .m-2 {
   margin: 0.5rem;
 }
+.m-10 {
+  margin: 2.5rem;
+}
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -604,10 +607,6 @@ video {
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-}
-.mx-3 {
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
 }
 .mx-10 {
   margin-left: 2.5rem;
@@ -641,9 +640,6 @@ video {
 }
 .ml-2 {
   margin-left: 0.5rem;
-}
-.mt-5 {
-  margin-top: 1.25rem;
 }
 .mt-1 {
   margin-top: 0.25rem;
@@ -687,11 +683,17 @@ video {
 .h-auto {
   height: auto;
 }
+.h-72 {
+  height: 18rem;
+}
 .h-64 {
   height: 16rem;
 }
 .h-6 {
   height: 1.5rem;
+}
+.h-60 {
+  height: 15rem;
 }
 .h-max {
   height: -webkit-max-content;
@@ -712,14 +714,17 @@ video {
   width: -moz-max-content;
   width: max-content;
 }
+.w-auto {
+  width: auto;
+}
 .w-48 {
   width: 12rem;
 }
 .w-5 {
   width: 1.25rem;
 }
-.w-40 {
-  width: 10rem;
+.w-56 {
+  width: 14rem;
 }
 .w-64 {
   width: 16rem;
@@ -733,8 +738,8 @@ video {
 .max-w-2xl {
   max-width: 42rem;
 }
-.max-w-md {
-  max-width: 28rem;
+.max-w-xs {
+  max-width: 20rem;
 }
 .max-w-4xl {
   max-width: 56rem;
@@ -804,9 +809,6 @@ video {
 .rounded {
   border-radius: 0.25rem;
 }
-.rounded-full {
-  border-radius: 9999px;
-}
 .rounded-md {
   border-radius: 0.375rem;
 }
@@ -827,6 +829,9 @@ video {
 }
 .border-dashed {
   border-style: dashed;
+}
+.border-none {
+  border-style: none;
 }
 .border-gray-300 {
   --tw-border-opacity: 1;
@@ -1235,7 +1240,7 @@ body {
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
-/* btn mocal == eliminar registro === cancelar and btn long-out */
+/* btn modal == eliminar registro === cancelar and btn long-out */
 .btn-cancel {
   border-radius: 0.5rem;
   border-width: 1px;
@@ -1424,6 +1429,9 @@ body {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.hover\:border-none:hover {
+  border-style: none;
+}
 .hover\:bg-blue-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 64 175 / var(--tw-bg-opacity));
@@ -1503,11 +1511,6 @@ body {
     margin-right: 2.5rem;
   }
 
-  .sm\:mx-8 {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-
   .sm\:mx-4 {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -1524,10 +1527,6 @@ body {
 
   .sm\:w-2\/4 {
     width: 50%;
-  }
-
-  .sm\:w-60 {
-    width: 15rem;
   }
 
   .sm\:w-2\/3 {

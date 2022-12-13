@@ -1,9 +1,9 @@
 
 
  <!--Modal detele account-->
-<!--  
+ 
   
- <div class="modal-delete opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
+ <!-- <div class="modal-de opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
    <div class="modal-over absolute w-full h-full bg-gray-900 opacity-50"></div>
 
    <div class="">
@@ -21,7 +21,7 @@
 
            <button type="button" class="btn-cancel modal-close-delete">No, cancelar</button>
 
-           <a href="<?= PATH ?>auth/destroySession.php" data-modal-toggle="popup-modal" type="button" class="btn-eliminar bg-red-600 ml-2 ">
+           <a href="<?= PATH ?>" data-modal-toggle="popup-modal" type="button" class="btn-eliminar bg-red-600 ml-2 ">
              Si, Eliminar
            </a>
 
@@ -30,6 +30,6 @@
      </div>
 
    </div>
- </div>
+ </div> -->
 
- -->
+

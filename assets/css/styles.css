@@ -345,10 +345,6 @@ a{
 
 
 /* imagenes forms */
-
-
-
-
 .file-upload {
   width: 200px;
 }
@@ -417,7 +413,7 @@ a{
   width: 220px;
   margin: 0;
   color: #fff;
-  background-color: #c13b2a !important;
+  background-color: #b91c1c !important;
   border: none;
   padding: 10px;
   transition: all .2s ease;

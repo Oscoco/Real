@@ -19,16 +19,27 @@
 
     <section class="w-full h-auto flex flex-wrap justify-center">
 
-        <div class="bg-white w-max m-4 rounded-xl shadow-md flex flex-col justify-center">
-                <div class="container p-5">
-                    <img class="w-40 max-w-md mx-3 mt-5 rounded-xl shadow-sm sm:w-60 sm:mx-8 " src="<?=PATH?>assets/img/perfil.jpg" alt="">
+        <div class="bg-white w-max m-4 rounded-xl shadow-md flex flex-col justify-center px-5">
+
+                <div class="container p-5 image-upload-wrap hover:border-none border-none rounded-xl h-72 object-cover">
+                    <?php 
+                        $foto = "../../upload/".$_SESSION['foto'];
+                        if (file_exists($foto)) {
+                            ?>  
+                                <img src="<?php print $foto ?>" class="w-auto max-w-xs h-64 flex justify-center rounded-md ">
+                            <?php }else{ ?>
+                                SIN FOTO
+                            <?php } 
+                        ?> 
                 </div>
+
                 <div class="text-center sm:px-4 px-8 pb-8">
-                    <p class="text-xl font-black">
+                    <p class="text-xl font-black pt-3">
+                        
                         <?php  echo $_SESSION["name"]." ".$_SESSION["lastname"];  ?>
                     </p>
                     <p class="text-white text-md mt-1 bg-blue-700 p-2 rounded-lg">
-                        <?php echo $_SESSION["rolid"]?>
+                       Administrador
                     </p>
                 </div>
         </div>
@@ -42,23 +53,23 @@
                         <input type="text" id="first_name" class="input-space disabled-bg" value="<?php print $_SESSION["name"] ?>"  disabled>
                     </div>
                     <div>
-                        <label for="last_name" class="text-label ">Apellidos</label>
+                        <label class="text-label">Apellidos</label>
                         <input type="text" id="last_name" class="input-space disabled-bg" value="<?php print $_SESSION["lastname"] ?>"  disabled>
                     </div>
                     <div>
-                        <label for="phone" class="text-label ">Numero de telefono</label>
+                        <label class="text-label">Numero de telefono</label>
                         <input for="disabled_filled" type="phone" id="" class="input-space disabled-bg" value="<?php print $_SESSION["phone"] ?>" disabled>
                     </div>
                     <div>
-                        <label for="twophone" class="text-label ">Numero de telefono (2)</label>
+                        <label class="text-label">Numero de telefono (2)</label>
                         <input type="twophone" class="input-space disabled-bg" value="<?php print $_SESSION["twophone"] ?>" disabled>
                     </div>
                     <div>
-                        <label for="" class="text-label ">Correo electronico</label>
+                        <label class="text-label">Correo electronico</label>
                         <input type="email" id="email" class="input-space disabled-bg" value="<?php print $_SESSION["email"] ?>"  disabled>
                     </div>
                     <div>
-                        <label for="" class="text-label ">Dui</label>
+                        <label class="text-label ">Dui</label>
                         <input type="dui" id="dui" class="input-space disabled-bg" value="<?php print $_SESSION["dui"] ?>" disabled>
                     </div>
                 </div>

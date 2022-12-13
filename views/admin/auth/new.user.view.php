@@ -100,13 +100,25 @@
                     </div>
 
                     <div class="mb-6 px-8">
-                        <label for="default" class="text-label">Rol del administrador <?php require '../../components/require.php'; ?></label>
+                        <label for="default" class="text-label">Rol del administradorzzz <?php require '../../components/require.php'; ?></label>
                         <select name="rolid" class="input-space" required>
                             <option>Seleccionar el rol</option>
-                            <option value="1">Programador</option>
+                            <?php
+                                $roles = new Real\rolesuser;
+                                
+                                $info_rol = $roles->mostrar();
+                                $cantidad = count($info_rol);
+                                    for ($x =0; $x<$cantidad; $x++) { 
+                                        $item = $info_rol[$x];
+                                ?>
+                                    <option value="<?php print $item['id'] ?>"><?php print $item['nombrerol'] ?></option>
+                                <?php
+                                }
+                            ?>
+
                         </select>
                     </div>
-
+                    
                     <div class="pb-6 px-9">
                         <input type="submit" name="createUser" class="inputbtn bg-blue-700" value="Nuevo administrador" >
                     </div>
@@ -116,10 +128,6 @@
         </form>
     </section>
 
-    <?php
-    require './../../vendor/autoload.php';
-    $usuario = new Real\Usuarios;
-?>
 </body>
 
 </html>

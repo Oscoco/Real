@@ -11,8 +11,18 @@
             ?>
             </p>
 
-            <div class="header__img">
-                <img class="p-1  rounded-full" src="<?= PATH ?>assets/img/perfil.jpg" alt="">
+            <div class="header__img ">
+                <div class="p-1 ">
+                    <?php 
+                        $foto = "../../upload/".$_SESSION['foto'];
+                        if (file_exists($foto)) {
+                            ?>
+                                <img src="<?php print $foto ?>" class="w-auto max-w-xs">
+                            <?php }else{ ?>
+                                SIN FOTO
+                            <?php } 
+                        ?> 
+                </div>
             </div>
             
             <div class="p-2 pl-2  text-xl text-center text-blue-600 ">

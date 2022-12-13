@@ -106,7 +106,7 @@ class Usuarios{
     }
 
     // funcion para mostrar individual
-    public function mostrarporId($id){
+    public function mostrarporid($id){
         $sql = "SELECT * FROM `usuario` WHERE `id`=:id ";
 
         $resultado = $this->cn->prepare($sql);
