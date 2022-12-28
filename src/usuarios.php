@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Real;
     
 class Usuarios{
@@ -21,57 +20,58 @@ class Usuarios{
         ));
     }
 
-    public function registrar ($_params){
-    // hacemos un envio para la base de datos 
+    public function registrar($_params){
     $sql = "INSERT INTO `usuario`(`user`, `password`, `name`, `lastname`, `phone`, `twophone`, `email`, `dui`, `rolid`, `foto`) 
-    VALUES (:user,:password,:name,:lastname,:phone,:twophone,:email,:dui,:rolid,:foto)";
+        VALUES (:user,:password,:name,:lastname,:phone,:twophone,:email,:dui,:rolid,:foto)";
 
-    $resultado = $this->cn->prepare($sql);
+        $resultado = $this->cn->prepare($sql);
 
-    $_array = array (
-        ":user" => $_params['user'],
-        ":password"=> $_params['password'],
-        ":name"=> $_params['name'],
-        ":lastname"=> $_params['lastname'],
-        ":phone" => $_params['phone'],
-        ":twophone" => $_params['twophone'],
-        ":email" => $_params['email'],
-        ":dui" => $_params['dui'],
-        ":rolid" => $_params['rolid'],
-        ":foto" => $_params['foto']
-    );
+        $_array = array(
+            ":user" => $_params['user'],
+            ":password" => $_params['password'],
+            ":name" => $_params['name'],
+            ":lastname" => $_params['lastname'],
+            ":phone" => $_params['phone'],
+            ":twophone" => $_params['twophone'],
+            ":email" => $_params['email'],
+            ":dui" => $_params['dui'],
+            ":rolid" => $_params['rolid'],
+            ":foto" => $_params['foto']
+        );
 
-    if ($resultado->execute($_array)) 
-        return true;
+        if ($resultado->execute($_array))
+            return true;
 
-    return false;
+        return false;
+    }
+
+    public function actualizar($_params){
+        $sql = "UPDATE `usuario` SET `user`=:user,`password`=:password,`name`=:name,
+        `lastname`=:lastname,`phone`=:phone,`twophone`=:twophone,`email`=:email,
+        `dui`=:dui,`rolid`=:rolid,`foto`=:foto WHERE `id`=:id";
     
-}
+        $resultado = $this->cn->prepare($sql);
 
-    public function actualizar ($_params){
-        // actualizamos los datos para la base de datos 
-    $sql ="UPDATE `usuario` SET `user`=':user',`password`=':password',`name`=':name',
-    `lastname`=':lastname',`phone`=':phone',`twophone`=':twophone',`email`=':email',`dui`=':dui',`rolid`=':rolid',`foto`=':foto' WHERE `id`=':id";
+        $_array = array (
+            ":user" => $_params['user'],
+            ":password"=> $_params['password'],
+            ":name"=> $_params['name'],
+            ":lastname"=> $_params['lastname'],
+            ":phone" => $_params['phone'],
+            ":twophone" => $_params['twophone'],
+            ":email" => $_params['email'],
+            ":dui" => $_params['dui'],
+            ":rolid" => $_params['rolid'],
+            ":foto" => $_params['foto'],
+            ":id" => $_params['id'],
 
-    $resultado = $this->cn->prepare($sql);
-    $_array = array (
-        ":user" => $_params['user'],
-        ":password"=> $_params['password'],
-        ":name"=> $_params['name'],
-        ":lastname"=> $_params['lastname'],
-        ":phone" => $_params['phone'],
-        ":twophone" => $_params['twophone'],
-        ":email" => $_params['email'],
-        ":dui" => $_params['dui'],
-        ":rolid" => $_params['rolid'],
-        ":foto" => $_params['foto']
-    );
-
-    if ($resultado->execute($_array)) 
-        return true;
-
-    return false;
-}
+        );
+    
+        if($resultado->execute($_array))
+                return true;
+    
+        return false;
+    }
 
     public function eliminar($id){
         $sql = "DELETE FROM `usuario` WHERE `id`=:id";
@@ -104,7 +104,6 @@ class Usuarios{
 
         return false;
     }
-
     // funcion para mostrar individual
     public function mostrarporid($id){
         $sql = "SELECT * FROM `usuario` WHERE `id`=:id ";
@@ -121,4 +120,3 @@ class Usuarios{
         return false;
     }
 }
-?>

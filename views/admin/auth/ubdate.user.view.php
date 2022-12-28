@@ -18,7 +18,7 @@
             <p>Administrador / <span class="active-text">Actualizar Datos</span> </p>
             <a href="<?= PATH ?>admin/auth/Users.php" type="" class="primary_btn my-4 m-3"><i class='bx bx-arrow-back px-1'></i>Regresar</a>
         </div>
-        <input type="hidden" name="id" value="<?php print $resultado['id'] ?>">
+
     </section>
 
     <section class="container flex justify-center items-center">
@@ -26,22 +26,25 @@
 
             <div class="bg-white w-max m-2 rounded-xl shadow-md flex flex-col justify-center container ">
                 <div class="text-center sm:p-4 p-2 ">
-                    <div class="active-text">
-                        <span class="text-xl"> Imagen Actual </span>
+                    <div class="active-text pb-1">
+                        <span class="text-lg"> Toca para actualizar </span>
                     </div>
-                    <div class="file-upload m-2 rounded-xl shadow-md flex flex-col justify-center container">
-                        <div class="image-upload-wrap rounded-xl h-72 object-cover">
+                    <div class="file-upload rounded-xl shadow-md flex flex-col justify-center container items-center ">
+                        <div class="image-upload-wrap rounded-xl h-72 object-cover ">
                             <input class="file-upload-input " type='file' name="foto" onchange="readURL(this);" accept="image/*" value="<?php print $resultadoPersona['foto'] ?>" />
                             <?php
                             $foto = "../../upload/" . $resultadoUser['foto'];
                             if (file_exists($foto)) {
                             ?>
-                                <img src="<?php print $foto ?>" alt="" class="w-56 h-60 flex justify-center border m-10">
+                                <img src="<?php print $foto ?>" alt="" class="w-56 h-60 flex justify-center border m-10 rounded-xl">
+                                
                             <?php } else { ?>
-                                SIN FOTO
+                                <img src="<?=PATH?>assets/img/none.jpg" alt="">
                             <?php }
                             ?>
+                        
                         </div>
+                       
 
                         <div class="file-upload-content rounded-xl shadow-md">
                             <div class="flex justify-center items-center flex-col py-2">
@@ -55,10 +58,12 @@
 
                     </div>
                 </div>
+                <div></div>
                 <div class="sm:px-10 p-5 grid justify-center">
                     <p class="text-white text-md mt-1 bg-blue-700 p-4 rounded-lg w-auto">
                         <span class="font-bold">Nombre:</span>
                         <?php print $resultadoUser['foto'] ?>
+                        <input type="hidden" name="foto_temp" value="<?php print $resultadoUser["foto"] ?>">
                     </p>
                 </div>
             </div>
@@ -116,23 +121,24 @@
                         <label for="default" class="text-label">Rol del administrador <?php require '../../components/require.php'; ?></label>
                         <select name="rolid" class="input-space" required>
                             <option>Seleccionar el rol</option>
-                            
+
                             <?php
-                                $roles = new Real\rolesuser;
-                                
-                                $info_rol = $roles->mostrar();
-                                $cantidad = count($info_rol);
-                                    for ($x =0; $x<$cantidad; $x++) { 
-                                        $item = $info_rol[$x];
-                                ?>
-                                    <option value="<?php print $item['id'] ?>"><?php print $item['nombrerol'] ?></option>
-                                <?php
-                                }
+                            $roles = new Real\rolesuser;
+
+                            $info_rol = $roles->mostrar();
+                            $cantidad = count($info_rol);
+                            for ($x = 0; $x < $cantidad; $x++) {
+                                $item = $info_rol[$x];
+                            ?>
+                                <option value="<?php print $item['id'] ?>"><?php print $item['nombrerol'] ?></option>
+                            <?php
+                            }
                             ?>
 
                         </select>
-                        </select>
                     </div>
+
+                    <input type="hidden" name="id" value="<?php print $resultadoUser['id'] ?>">
 
                     <div class="flex sm:flex-nowrap flex-wrap items-center justify-start sm:justify-center px-8">
 
@@ -142,18 +148,19 @@
 
 
                         <div class="w-full mx-0 sm:mx-4">
-                            <input type="submit" name="actualizar_user" class="primary_btn w-full bg-blue-700" value="Actualizar">
+                            <input type="submit" name="accion" class="primary_btn w-full bg-blue-700" value="Actualizar">
                         </div>
-
-                    <!--<div class="pb-6 px-9">
-                            <input type="submit" name="createUser" class="inputbtn bg-blue-700" value="Nuevo administrador" >
-                        </div> -->
                     </div>
                 </div>
             </div>
         </form>
     </section>
 
+
+
+
+
+    
 
 </body>
 

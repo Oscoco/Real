@@ -26,7 +26,7 @@
             tenemos la direccion del metodo, hacemos validos los archivos img y demas, enviando por POST-->
             <div class="bg-white w-max m-2 rounded-xl shadow-md flex flex-col justify-center container ">
                 <div class="text-center sm:p-4 p-2 ">
-                    <div class="file-upload m-2 rounded-xl shadow-md flex flex-col justify-center container">
+                    <div class="file-upload rounded-xl shadow-md flex flex-col justify-center container">
                         <div class="image-upload-wrap rounded-xl h-64">
                             <input class="file-upload-input" type='file' name="foto" onchange="readURL(this);" accept="image/*" />
                             <div class="drag-text">
@@ -100,7 +100,8 @@
                     </div>
 
                     <div class="mb-6 px-8">
-                        <label for="default" class="text-label">Rol del administradorzzz <?php require '../../components/require.php'; ?></label>
+                        <label for="default" class="text-label">Rol del administrador <?php require '../../components/require.php'; ?></label>
+
                         <select name="rolid" class="input-space" required>
                             <option>Seleccionar el rol</option>
                             <?php
@@ -111,16 +112,15 @@
                                     for ($x =0; $x<$cantidad; $x++) { 
                                         $item = $info_rol[$x];
                                 ?>
-                                    <option value="<?php print $item['id'] ?>"><?php print $item['nombrerol'] ?></option>
+                                    <option value="<?php print $item['id'] ?>"><?php print $item['nombrerol'] ?></option >
                                 <?php
                                 }
                             ?>
-
                         </select>
                     </div>
                     
                     <div class="pb-6 px-9">
-                        <input type="submit" name="createUser" class="inputbtn bg-blue-700" value="Nuevo administrador" >
+                        <input type="submit" name="accion" class="inputbtn bg-blue-700" value="Nuevo administrador" >
                     </div>
 
                 </div>

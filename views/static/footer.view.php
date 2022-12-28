@@ -6,8 +6,7 @@
 
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 <!-- nesesario para funcionar el formulario de ver la contraseña -->
-<script src="<?=PATH?>assets/js/main.js"></script>
+<script src="<?=PATH?>assets/js/main.js" ></script>
 
 <script src="<?=PATH?>assets/js/image.js"></script>
 
-<!-- <script src="<?=PATH?>assets/js/delete-account.js"></script> -->

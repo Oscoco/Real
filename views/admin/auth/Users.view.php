@@ -50,71 +50,66 @@
                         </th>
                     </tr>
                 </thead>
-                
+
                 <tbody>
+                    <?php
+                    require '../../vendor/autoload.php';
+
+                    $user = new Real\Usuarios;
+                    $itemsUser = $user->mostrar();
+                    $cantidad = count($itemsUser);
+
+                    if ($cantidad > 0) {
+                        $c = 0;
+                        for ($x = 0; $x < $cantidad; $x++) {
+                            $c++;
+                            $item = $itemsUser[$x];
+                    ?>
+                            <tr class="bg-white border-b text-black font-bold hover:bg-gray-200">
+                                <th scope="col" class="py-3 px-5 border-r w-max text-center">
+                                    <?php print $c ?>
+                                </th>
+                                <th scope="row" class="py-4 px-6 whitespace-nowrap ">
+                                    <?php print $item['name'] ?>
+                                </th>
+                                <th scope="row" class="py-4 px-6 whitespace-nowrap ">
+                                    <?php print $item['lastname'] ?>
+                                </th>
+                                <td class="py-4 px-6">
+                                    <?php print $item['nombrerol'] ?>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <?php print $item['phone'] ?>
+                                </td>
+                                <td class="py-4 bg-gray-50">
+                                    <div class='flex items-center justify-center'>
+
+                                        <a href="<?= PATH ?>admin/auth/ubdate.user.php?id=<?php print $item['id'] ?>" class="btn_update">
+                                            <i class='bx bx-edit'></i>
+                                        </a>
+
+                                        <a href="<?= PATH ?>admin/models/authAction.php?id=<?php print $item['id'] ?>">
+                                            <p class="mx-2 btn_trash"><i class='bx bxs-trash'></i></p>
+                                        </a>
+
+                                    </div>
+                                </td>
+                            </tr>
                         <?php
-                            require '../../vendor/autoload.php';
-
-                            $user = new Real\Usuarios;
-                            $itemsUser = $user->mostrar();
-                            $cantidad = count($itemsUser);
-
-                            if($cantidad >0){
-                                $c=0;
-                            for($x =0; $x < $cantidad; $x++){
-                                $c++;
-                                $item = $itemsUser[$x];
-                        ?>
-                        <tr class="bg-white border-b text-black font-bold hover:bg-gray-200">
-                            <th scope="col" class="py-3 px-5 border-r w-max text-center">
-                                <?php print $c ?>
-                            </th>
-                            <th scope="row" class="py-4 px-6 whitespace-nowrap ">
-                                <?php print $item['name'] ?>
-                            </th>
-                            <th scope="row" class="py-4 px-6 whitespace-nowrap ">
-                                 <?php print $item['lastname'] ?>
-                            </th>
-                            <td class="py-4 px-6">
-                                 <?php print $item['nombrerol'] ?>
-                            </td>
-                            <td class="py-4 px-6">
-                                 <?php print $item['phone'] ?>
-                            </td>
-                            <td class="py-4 bg-gray-50">
-                                <div class='flex items-center justify-center'>
-
-                                    <a href="<?=PATH?>admin/auth/ubdate.user.php?id=<?php print $item['id']?>" class="btn_update">
-                                       <i class='bx bx-edit'></i>
-                                    </a>
-
-                                    <a href="<?=PATH?>admin/models/authAction.php?id=<?php print $item['id']?>">
-                                        <p class="mx-2 btn_trash"><i class='bx bxs-trash'></i></p>
-                                    </a>
-
-                                </div>
-                            </td>
-                        </tr>
-                        <?php
-                            }
-                        }else{
+                        }
+                    } else {
                         ?>
                         <tr>
                             <td colspan="5"> No hay registros </td>
                         </tr>
-                            <?php
-                                }
-                            ?>
+                    <?php
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
 
     </section>
-<br>
-
+    <br>
 </body>
-
-
-
-
 </html>
